@@ -23,7 +23,8 @@ function modelLoded(){
 function speak(){
     var synth=window.speechSynthesis;
     speak_data_1="The prediction is "+prediction_1;
-    synth.speak(utterthis);
+    var utterThis = new SpeechSynthesisUtterance(speak_data_1);
+    synth.speak(utterThis);
 }
 function check(){
     img=document.getElementById("img1");
